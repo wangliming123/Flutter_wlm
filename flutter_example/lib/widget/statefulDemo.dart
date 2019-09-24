@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 void main() => runApp(MyApp("Hello World"));
 
+// ignore: must_be_immutable
 class MyApp extends StatefulWidget {
   String content;
 

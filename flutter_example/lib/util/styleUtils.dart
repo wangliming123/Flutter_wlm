@@ -11,4 +11,9 @@ class TextUtil {
     color: Colors.blue,
     fontSize: 20.0,
   );
+
+  static final TextStyle redText = TextStyle(
+    color: Colors.red,
+    fontSize: 20.0,
+  );
 }

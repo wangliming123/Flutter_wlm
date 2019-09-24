@@ -13,10 +13,26 @@ class TextApp extends StatelessWidget {
         appBar: AppBar(
           title: Text(
             "Text Widget",
-            style: TextUtil.blueText,
           ),
         ),
-        body: Text("Hello Text"),
+        body: Column(
+          children: <Widget>[
+            Text(
+              "Hello Text",
+              style: TextUtil.normalText,),
+            RichText(
+              text: TextSpan(
+                children: [
+                  TextSpan(text: "hello", style: TextUtil.blueText),
+                  TextSpan(text: "Rich Text", style: TextUtil.redText),
+                ]
+              ),
+            )
+          ],
+        )
+
+
+
       ),
     );
   }
