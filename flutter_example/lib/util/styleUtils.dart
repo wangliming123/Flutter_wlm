@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class TextUtil {
+class TextStyles {
   static final TextStyle normalText = TextStyle(
       color: Colors.black,
       fontSize: 20.0,
@@ -20,7 +20,7 @@ class TextUtil {
 
   static final TextStyle whiteStyle = TextStyle(
     color: Colors.white,
-    fontSize: 40.0,
+    fontSize: 20.0,
   );
 
   static TextStyle getThemeStyle(BuildContext context) {
@@ -28,5 +28,27 @@ class TextUtil {
         color: Theme.of(context).primaryColor,
     );
   }
+
+  static final helloWorldText = TextStyle(
+      height: 1.2,
+      fontSize: 18,
+      color: Colors.blue,
+      fontFamily: "Courier",
+      background: new Paint()..color=Colors.yellow,
+      decoration: TextDecoration.underline,
+      decorationStyle: TextDecorationStyle.dashed
+  );
+
+  static final gigiText = TextStyle(
+    fontFamily: "GIGI",
+  );
+
+  static final harlowsiText = TextStyle(
+    fontFamily: "HARLOWSI",
+  );
+
+}
+
+class ButtonStyles {
 
 }

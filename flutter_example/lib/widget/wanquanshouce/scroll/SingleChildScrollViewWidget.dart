@@ -15,7 +15,7 @@ class SingleChildApp extends StatelessWidget {
           scrollDirection: Axis.horizontal,
           padding: EdgeInsets.all(10),
           child: Row(
-            children: <Widget>[Text("Hello wlm " * 100, style: TextUtil.normalText)],
+            children: <Widget>[Text("Hello wlm " * 100, style: TextStyles.normalText)],
           ),
         ),
       ),

@@ -1,9 +1,9 @@
-import 'package:douban_movie/bean/MovieData.dart';
+import 'package:douban_movie/bean/MovieDataEntity.dart' as prefix0;
 import 'package:douban_movie/repo/StyleRepo.dart';
 import 'package:flutter/material.dart';
 
 class HotMovieItem extends StatefulWidget {
-  final MovieData movieData;
+  final prefix0.MovieData movieData;
 
   HotMovieItem(this.movieData);
 
@@ -22,7 +22,7 @@ class HotMovieItemState extends State<HotMovieItem> {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
-          Image.network(widget.movieData.images,
+          Image.network(widget.movieData.images.small,
               width: 80, height: 120, fit: BoxFit.cover),
           Expanded(
             flex: 1,
@@ -58,7 +58,7 @@ class HotMovieItemState extends State<HotMovieItem> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 Text(
-                  "${widget.movieData.watchedPeople}人看过",
+                  "${widget.movieData.collectCount}人看过",
                   style: StyleRepo.movieItemRedStyle,
                 ),
                 OutlineButton(

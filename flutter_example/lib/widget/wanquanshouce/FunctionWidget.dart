@@ -18,7 +18,7 @@ class ThemeDataWidget extends StatelessWidget{
         appBar: AppBar(title: Text("ThemeDataWidget"),),
 
           //这种写法不行，why????
-//        body: Text("Theme.of(context)", style: TextUtil.getThemeStyle(context),),
+//        body: Text("Theme.of(context)", style: TextStyles.getThemeStyle(context),),
         body: ThemeText(),
       ),
     );
@@ -28,7 +28,7 @@ class ThemeText extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Text("Theme.of(context)", style: TextUtil.getThemeStyle(context));
+    return Text("Theme.of(context)", style: TextStyles.getThemeStyle(context));
   }
 }
 

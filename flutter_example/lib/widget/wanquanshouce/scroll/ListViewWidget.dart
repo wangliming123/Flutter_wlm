@@ -57,7 +57,7 @@ class ListViewSeparatedWidget extends StatelessWidget {
               title: Text(items[index]),
             );
           },
-          separatorBuilder: (BuildContext, index) {
+          separatorBuilder: (context, index) {
             return Container(
               constraints: BoxConstraints.tightFor(height: 10),
               color: Colors.orange,

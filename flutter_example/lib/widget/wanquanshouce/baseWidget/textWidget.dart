@@ -19,12 +19,12 @@ class TextApp extends StatelessWidget {
           children: <Widget>[
             Text(
               "Hello Text",
-              style: TextUtil.normalText,),
+              style: TextStyles.normalText,),
             RichText(
               text: TextSpan(
                 children: [
-                  TextSpan(text: "hello", style: TextUtil.blueText),
-                  TextSpan(text: "Rich Text", style: TextUtil.redText),
+                  TextSpan(text: "hello", style: TextStyles.blueText),
+                  TextSpan(text: "Rich Text", style: TextStyles.redText),
                 ]
               ),
             )

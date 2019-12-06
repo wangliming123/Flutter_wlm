@@ -35,7 +35,7 @@ class ContainerApp extends StatelessWidget {
           alignment: Alignment.center,
           child: Text(
             "Hello Container",
-            style: TextUtil.whiteStyle,
+            style: TextStyles.whiteStyle,
           ),
         ),
       ),
