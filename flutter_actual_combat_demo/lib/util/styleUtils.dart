@@ -48,7 +48,3 @@ class TextStyles {
   );
 
 }
-
-class ButtonStyles {
-
-}

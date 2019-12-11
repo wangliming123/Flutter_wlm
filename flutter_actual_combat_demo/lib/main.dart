@@ -1,36 +1,52 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_actual_combat_demo/baseWidgets/ButtonWidget.dart';
-import 'package:flutter_actual_combat_demo/baseWidgets/FormWidget.dart';
-import 'package:flutter_actual_combat_demo/baseWidgets/ImageWidget.dart';
-import 'package:flutter_actual_combat_demo/baseWidgets/SwitchAndCheckboxWidget.dart';
-import 'package:flutter_actual_combat_demo/baseWidgets/TextFieldWidget.dart';
-import 'package:flutter_actual_combat_demo/baseWidgets/TextWidget.dart';
+import 'package:flutter_actual_combat_demo/containerWidgets/TestContainer.dart';
+import 'baseWidgets/ButtonWidget.dart';
+import 'baseWidgets/FormWidget.dart';
+import 'baseWidgets/ImageWidget.dart';
+import 'baseWidgets/SwitchAndCheckboxWidget.dart';
+import 'baseWidgets/TextFieldWidget.dart';
+import 'baseWidgets/TextWidget.dart';
+import 'containerWidgets/ConstrainedBoxWidget.dart';
+import 'containerWidgets/DecoratedBoxWidget.dart';
+import 'containerWidgets/PaddingWidget.dart';
+import 'layoutWidgets/FlexWidget.dart';
+import 'layoutWidgets/RowAndColumn.dart';
+import 'layoutWidgets/StackAndPositioned.dart';
+import 'containerWidgets/TestTransform.dart';
+import 'layoutWidgets/WrapAndFlow.dart';
 
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
-  final List<String> items = [
-    "new_page", "text and style", "buttons", "images", "switch and checkbox",
-    "TextField", "Form"
-  ];
+  final Map<String, WidgetBuilder> routes = {
+    "new_page": (context) => NewRoute(),
+    "text and style": (context) => TextWidget(),
+    "buttons": (context) => ButtonWidget(),
+    "images": (context) => ImageWidget(),
+    "switch and checkbox": (context) => SwitchAndCheckboxWidget(),
+    "TextField": (context) => TextFieldWidget(),
+    "Form": (context) => FormWidget(),
+    "Row and Column": (context) => RowAndColumn(),
+    "Flex": (context) => FlexWidget(),
+    "Wrap and Flow": (context) => WrapAndFlow(),
+    "Stack and Positioned": (context) => StackAndPositioned(),
+    "Padding": (context) => PaddingWidget(),
+    "ConstrainedBox": (context) => ConstrainedBoxWidget(),
+    "DecoratedBox": (context) => DecoratedBoxWidget(),
+    "Transform": (context) => TestTransform(),
+    "Container": (context) => TestContainer(),
+  };
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      routes: {
-        "new_page": (context) => NewRoute(),
-        "text and style": (context) => TextWidget(),
-        "buttons": (context) => ButtonWidget(),
-        "images": (context) => ImageWidget(),
-        "switch and checkbox": (context) => SwitchAndCheckboxWidget(),
-        "TextField": (context) => TextFieldWidget(),
-        "Form": (context) => FormWidget(),
-      },
+      routes: routes,
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: MyHomePage(title: 'Flutter Demo Home Page', items: items),
+      home: MyHomePage(
+          title: 'Flutter Demo Home Page', items: routes.keys.toList()),
     );
   }
 }
@@ -53,6 +69,7 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text(widget.title),
       ),
       body: ListView.builder(
+        padding: EdgeInsets.all(5.0),
         itemCount: widget.items.length,
         itemBuilder: (context, index) {
           return RaisedButton(
