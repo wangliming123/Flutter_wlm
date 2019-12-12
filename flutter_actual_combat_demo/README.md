@@ -1,16 +1,14 @@
-# flutter_actual_combat_demo
+# flutter实战练习demo
 
-Demos for Flutter Actual Combat.
+web 环境：
+    flutter config --enable-web
+    set enable-web=true
 
-## Getting Started
+windows 环境：
+    flutter config --enable-windows-desktop
+    set enable-windows-desktop=true
+    官网下载Visual Studio(Community)  https://visualstudio.microsoft.com/zh-hans/downloads/
+    安装完成之后，运行Visual Studio Install，选择使用C++进行桌面开发，勾选windows10 sdk 17763，MSVC 142 2019
+    勾选单个组件中的MSBuild，安装
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+web、windows命令： flutter run -d Chrome(windows)

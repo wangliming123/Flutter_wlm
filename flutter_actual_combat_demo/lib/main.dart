@@ -1,5 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_actual_combat_demo/containerWidgets/TestContainer.dart';
+import 'package:flutter_actual_combat_demo/scrollWidget/TestCustomScrollView.dart';
+import 'package:flutter_actual_combat_demo/scrollWidget/TestGridView.dart';
+import 'package:flutter_actual_combat_demo/scrollWidget/TestGridViewBuilder.dart';
+import 'package:flutter_actual_combat_demo/scrollWidget/TestInfiniteListView.dart';
+import 'package:flutter_actual_combat_demo/scrollWidget/TestListView.dart';
+import 'package:flutter_actual_combat_demo/scrollWidget/TestScrollController.dart';
+import 'package:flutter_actual_combat_demo/scrollWidget/TestScrollNotofication.dart';
+import 'package:flutter_actual_combat_demo/scrollWidget/TestSingleChildScroll.dart';
 import 'baseWidgets/ButtonWidget.dart';
 import 'baseWidgets/FormWidget.dart';
 import 'baseWidgets/ImageWidget.dart';
@@ -19,7 +27,7 @@ void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
   final Map<String, WidgetBuilder> routes = {
-    "new_page": (context) => NewRoute(),
+    "Source Code": (context) => NewRoute(),
     "text and style": (context) => TextWidget(),
     "buttons": (context) => ButtonWidget(),
     "images": (context) => ImageWidget(),
@@ -35,6 +43,14 @@ class MyApp extends StatelessWidget {
     "DecoratedBox": (context) => DecoratedBoxWidget(),
     "Transform": (context) => TestTransform(),
     "Container": (context) => TestContainer(),
+    "SingleChildScrollView": (context) => TestSingleChildScroll(),
+    "ListView": (context) => TestListView(),
+    "InfiniteListView": (context) => TestInfiniteListView(),
+    "GridView": (context) => TestGridView(),
+    "GridViewBuilder": (context) => TestGridViewBuilder(),
+    "CustomScrollView": (context) => TestCustomScrollView(),
+    "ScrollController": (context) => TestScrollController(),
+    "ScrollNotification": (context) => TestScrollNotification(),
   };
 
   @override
@@ -65,9 +81,7 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.title),
-      ),
+      appBar: AppBar(title: Text(widget.title)),
       body: ListView.builder(
         padding: EdgeInsets.all(5.0),
         itemCount: widget.items.length,
@@ -94,10 +108,18 @@ class _MyHomePageState extends State<MyHomePage> {
 class NewRoute extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    String sourceUrl =
+        "https://github.com/wangliming123/Flutter_wlm/tree/master/flutter_actual_combat_demo";
     return Scaffold(
-      appBar: AppBar(title: Text("New Route")),
+      appBar: AppBar(title: Text("Source Code Route")),
       body: Center(
-        child: Text("This is New Route"),
+        child: Padding(
+          padding: EdgeInsets.all(20.0),
+          child: Text.rich(TextSpan(children: [
+            TextSpan(text: "source code: "),
+            TextSpan(text: sourceUrl, style: TextStyle(color: Colors.blue))
+          ])),
+        ),
       ),
     );
   }
