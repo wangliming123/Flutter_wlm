@@ -1,19 +1,19 @@
 # Flutter_wlm
 flutter examples by wlm
 
-flutter_actual_combat_demo£ºflutterÊµÕ½Demo£¨ÈëÃÅÑ§Ï°demo£©
+flutter_actual_combat_demoï¼šflutterå®æˆ˜Demoï¼ˆå…¥é—¨å­¦ä¹ demoï¼‰
 
 
-web »·¾³£º
+web ç¯å¢ƒï¼š
     flutter config --enable-web
     set enable-web=true
 
-windows »·¾³£º
-    flutter config --enable-windows-desktop
-    set enable-windows-desktop=true
-    ¹ÙÍøÏÂÔØVisual Studio(Community)  https://visualstudio.microsoft.com/zh-hans/downloads/
-    °²×°Íê³ÉÖ®ºó£¬ÔËĞĞVisual Studio Install£¬Ñ¡ÔñÊ¹ÓÃC++½øĞĞ×ÀÃæ¿ª·¢£¬¹´Ñ¡windows10 sdk 17763£¬MSVC 142 2019
-    ¹´Ñ¡µ¥¸ö×é¼şÖĞµÄMSBuild£¬°²×°
+windows ç¯å¢ƒï¼š
+    flutter config --enable-windows-desktop  
+    set enable-windows-desktop=true  
+    å®˜ç½‘ä¸‹è½½Visual Studio(Community)  https://visualstudio.microsoft.com/zh-hans/downloads/  
+    å®‰è£…å®Œæˆä¹‹åï¼Œè¿è¡ŒVisual Studio Installï¼Œé€‰æ‹©ä½¿ç”¨C++è¿›è¡Œæ¡Œé¢å¼€å‘ï¼Œå‹¾é€‰windows10 sdk 17763ï¼ŒMSVC 142 2019  
+    å‹¾é€‰å•ä¸ªç»„ä»¶ä¸­çš„MSBuildï¼Œå®‰è£…  
 
-web¡¢windowsÃüÁî£º flutter run -d Chrome(windows)
+webã€windowså‘½ä»¤ï¼š flutter run -d Chrome(windows)
 
