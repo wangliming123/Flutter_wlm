@@ -1,13 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_actual_combat_demo/containerWidgets/TestContainer.dart';
-import 'package:flutter_actual_combat_demo/scrollWidget/TestCustomScrollView.dart';
-import 'package:flutter_actual_combat_demo/scrollWidget/TestGridView.dart';
-import 'package:flutter_actual_combat_demo/scrollWidget/TestGridViewBuilder.dart';
-import 'package:flutter_actual_combat_demo/scrollWidget/TestInfiniteListView.dart';
-import 'package:flutter_actual_combat_demo/scrollWidget/TestListView.dart';
-import 'package:flutter_actual_combat_demo/scrollWidget/TestScrollController.dart';
-import 'package:flutter_actual_combat_demo/scrollWidget/TestScrollNotofication.dart';
-import 'package:flutter_actual_combat_demo/scrollWidget/TestSingleChildScroll.dart';
+import 'package:flutter_actual_combat_demo/eventWidgets/TestPointer.dart';
+import 'package:flutter_actual_combat_demo/functionWidgets/TestInheritedWidget.dart';
+import 'package:flutter_actual_combat_demo/functionWidgets/TestTheme.dart';
+import 'package:flutter_actual_combat_demo/functionWidgets/TestWillPopScope.dart';
+import 'package:flutter_actual_combat_demo/scrollWidgets/TestCustomScrollView.dart';
+import 'package:flutter_actual_combat_demo/scrollWidgets/TestGridView.dart';
+import 'package:flutter_actual_combat_demo/scrollWidgets/TestGridViewBuilder.dart';
+import 'package:flutter_actual_combat_demo/scrollWidgets/TestInfiniteListView.dart';
+import 'package:flutter_actual_combat_demo/scrollWidgets/TestListView.dart';
+import 'package:flutter_actual_combat_demo/scrollWidgets/TestScrollController.dart';
+import 'package:flutter_actual_combat_demo/scrollWidgets/TestScrollNotofication.dart';
+import 'package:flutter_actual_combat_demo/scrollWidgets/TestSingleChildScroll.dart';
 import 'baseWidgets/ButtonWidget.dart';
 import 'baseWidgets/FormWidget.dart';
 import 'baseWidgets/ImageWidget.dart';
@@ -51,6 +55,10 @@ class MyApp extends StatelessWidget {
     "CustomScrollView": (context) => TestCustomScrollView(),
     "ScrollController": (context) => TestScrollController(),
     "ScrollNotification": (context) => TestScrollNotification(),
+    "WillPopScope": (context) => TestWillPopScope(),
+    "InheritedWidget": (context) => TestInheritedWidget(),
+    "Theme": (context) => TestTheme(),
+    "Pointer": (context) => TestPointer(),
   };
 
   @override
@@ -82,24 +90,28 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text(widget.title)),
-      body: ListView.builder(
-        padding: EdgeInsets.all(5.0),
-        itemCount: widget.items.length,
-        itemBuilder: (context, index) {
-          return RaisedButton(
-            padding: EdgeInsets.all(8.0),
-            onPressed: () {
-              //导航到新路由
-              Navigator.pushNamed(context, widget.items[index]);
-//                    Navigator.push(context,
-//                        new MaterialPageRoute(builder: (context) {
-//                          return new NewRoute();
-//                        }));
-            },
-            child: Text(widget.items[index],
-                style: TextStyle(color: Colors.blue, fontSize: 18)),
-          );
-        },
+      body: Scrollbar(
+        child: ListView.separated(
+          padding: EdgeInsets.all(5.0),
+          itemCount: widget.items.length,
+          itemBuilder: (context, index) {
+            return RaisedButton(
+              padding: EdgeInsets.all(8.0),
+              onPressed: () {
+                //导航到新路由
+                Navigator.pushNamed(context, widget.items[index]);
+//                Navigator.push(context,
+//                    new MaterialPageRoute(builder: (context) {
+//                      return new NewRoute();
+//                    }));
+              },
+              child: Text(widget.items[index],
+                  style: TextStyle(color: Colors.blue, fontSize: 18)),
+            );
+          },
+          separatorBuilder: (context, index) =>
+              Divider(height: 1.0, color: Colors.white),
+        ),
       ),
     );
   }
