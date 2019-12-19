@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_actual_combat_demo/containerWidgets/TestContainer.dart';
+import 'package:flutter_actual_combat_demo/eventWidgets/TestGesture.dart';
 import 'package:flutter_actual_combat_demo/eventWidgets/TestPointer.dart';
 import 'package:flutter_actual_combat_demo/functionWidgets/TestInheritedWidget.dart';
 import 'package:flutter_actual_combat_demo/functionWidgets/TestTheme.dart';
@@ -59,6 +60,7 @@ class MyApp extends StatelessWidget {
     "InheritedWidget": (context) => TestInheritedWidget(),
     "Theme": (context) => TestTheme(),
     "Pointer": (context) => TestPointer(),
+    "Gesture": (context) => TestGesture(),
   };
 
   @override

@@ -61,6 +61,22 @@ class _PointerState extends State<TestPointer> {
 //                    behavior: HitTestBehavior.translucent, //放开此⾏注释后可以"点透"
                   ),
                 ],
+              ),
+              Listener(
+                //以下两个Widget都能阻⽌⼦树接收指针事件
+                //AbsorbPointer本身会参与命中测试，⽽IgnorePointer本身不会参与
+//                child: IgnorePointer(
+                child: AbsorbPointer(
+                  child: Listener(
+                    child: Container(
+                      color: Colors.red,
+                      width: 200.0,
+                      height: 100.0,
+                    ),
+                    onPointerDown: (event) =>print("in"),
+                  ),
+                ),
+                onPointerDown: (event)=>print("out"),
               )
             ],
           ),
