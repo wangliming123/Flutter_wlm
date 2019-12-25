@@ -1,5 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_actual_combat_demo/animation/StaggerAnimation.dart';
+import 'package:flutter_actual_combat_demo/animation/TestAnimationBuilder.dart';
+import 'package:flutter_actual_combat_demo/animation/TestHeroAnimation.dart';
+import 'package:flutter_actual_combat_demo/animation/TestRouteAnimation.dart';
+import 'package:flutter_actual_combat_demo/animation/TestScaleAnimation.dart';
 import 'package:flutter_actual_combat_demo/containerWidgets/TestContainer.dart';
+import 'package:flutter_actual_combat_demo/customizeWidgets/GradientButton.dart';
 import 'package:flutter_actual_combat_demo/eventWidgets/TestEventBus.dart';
 import 'package:flutter_actual_combat_demo/eventWidgets/TestGesture.dart';
 import 'package:flutter_actual_combat_demo/eventWidgets/TestNotification.dart';
@@ -65,6 +71,12 @@ class MyApp extends StatelessWidget {
     "Gesture": (context) => TestGesture(),
     "EventBus": (context) => TestEventBus(),
     "Notification": (context) => TestNotification(),
+    "ScaleAnimation": (context) => TestScaleAnimation(),
+    "AnimationBuilder": (context) => TestAnimationBuilder(),
+    "RouteAnimation": (context) => TestRouteAnimation(),
+    "HeroAnimation": (context) => TestHeroAnimation(),
+    "StaggerAnimation": (context) => TestStagger(),
+    "GradientButton": (context) => TestGradientButton(),
   };
 
   @override
@@ -134,8 +146,12 @@ class NewRoute extends StatelessWidget {
         child: Padding(
           padding: EdgeInsets.all(20.0),
           child: Text.rich(TextSpan(children: [
-            TextSpan(text: "source code: "),
-            TextSpan(text: sourceUrl, style: TextStyle(color: Colors.blue))
+            TextSpan(text: "源码地址: "),
+            TextSpan(text: sourceUrl, style: TextStyle(color: Colors.blue)),
+            TextSpan(text: "\n配合《flutter实战》食用更佳: "),
+            TextSpan(
+                text: "https://book.flutterchina.club",
+                style: TextStyle(color: Colors.blue)),
           ])),
         ),
       ),
