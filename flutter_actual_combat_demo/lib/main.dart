@@ -6,6 +6,9 @@ import 'package:flutter_actual_combat_demo/animation/TestRouteAnimation.dart';
 import 'package:flutter_actual_combat_demo/animation/TestScaleAnimation.dart';
 import 'package:flutter_actual_combat_demo/containerWidgets/TestContainer.dart';
 import 'package:flutter_actual_combat_demo/customizeWidgets/GradientButton.dart';
+import 'package:flutter_actual_combat_demo/customizeWidgets/GradientCircularProgressIndicator.dart';
+import 'package:flutter_actual_combat_demo/customizeWidgets/TestCustomPaint.dart';
+import 'package:flutter_actual_combat_demo/customizeWidgets/TurnBox.dart';
 import 'package:flutter_actual_combat_demo/eventWidgets/TestEventBus.dart';
 import 'package:flutter_actual_combat_demo/eventWidgets/TestGesture.dart';
 import 'package:flutter_actual_combat_demo/eventWidgets/TestNotification.dart';
@@ -13,6 +16,7 @@ import 'package:flutter_actual_combat_demo/eventWidgets/TestPointer.dart';
 import 'package:flutter_actual_combat_demo/functionWidgets/TestInheritedWidget.dart';
 import 'package:flutter_actual_combat_demo/functionWidgets/TestTheme.dart';
 import 'package:flutter_actual_combat_demo/functionWidgets/TestWillPopScope.dart';
+import 'package:flutter_actual_combat_demo/ioAndHttp/FileOperationRoute.dart';
 import 'package:flutter_actual_combat_demo/scrollWidgets/TestCustomScrollView.dart';
 import 'package:flutter_actual_combat_demo/scrollWidgets/TestGridView.dart';
 import 'package:flutter_actual_combat_demo/scrollWidgets/TestGridViewBuilder.dart';
@@ -77,6 +81,10 @@ class MyApp extends StatelessWidget {
     "HeroAnimation": (context) => TestHeroAnimation(),
     "StaggerAnimation": (context) => TestStagger(),
     "GradientButton": (context) => TestGradientButton(),
+    "TurnBox": (context) => TestTurnBox(),
+    "CustomPaint": (context) => TestCustomPaint(),
+    "GradientProgress": (context) => TestGradientProgress(),
+    "FileOperation": (context) => FileOperationRoute(),
   };
 
   @override

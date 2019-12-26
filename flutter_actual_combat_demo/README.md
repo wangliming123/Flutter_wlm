@@ -12,3 +12,5 @@ windows 环境：
     勾选单个组件中的MSBuild，安装
 
 web、windows命令： flutter run -d Chrome(windows)
+
+dart开源库地址： pub.dev
