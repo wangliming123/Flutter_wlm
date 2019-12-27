@@ -17,6 +17,8 @@ import 'package:flutter_actual_combat_demo/functionWidgets/TestInheritedWidget.d
 import 'package:flutter_actual_combat_demo/functionWidgets/TestTheme.dart';
 import 'package:flutter_actual_combat_demo/functionWidgets/TestWillPopScope.dart';
 import 'package:flutter_actual_combat_demo/ioAndHttp/FileOperationRoute.dart';
+import 'package:flutter_actual_combat_demo/ioAndHttp/HttpRoute.dart';
+import 'package:flutter_actual_combat_demo/ioAndHttp/WebSocketRoute.dart';
 import 'package:flutter_actual_combat_demo/scrollWidgets/TestCustomScrollView.dart';
 import 'package:flutter_actual_combat_demo/scrollWidgets/TestGridView.dart';
 import 'package:flutter_actual_combat_demo/scrollWidgets/TestGridViewBuilder.dart';
@@ -85,6 +87,8 @@ class MyApp extends StatelessWidget {
     "CustomPaint": (context) => TestCustomPaint(),
     "GradientProgress": (context) => TestGradientProgress(),
     "FileOperation": (context) => FileOperationRoute(),
+    "Http": (context) => HttpRoute(),
+    "WebSocket": (context) => WebSocketRoute(),
   };
 
   @override
